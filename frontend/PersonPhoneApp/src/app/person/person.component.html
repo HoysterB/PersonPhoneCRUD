@@ -1,0 +1,31 @@
+<mat-card class="home mat-elevation-z3 mt">
+  <mat-card-title class="title"> Cadastro de pessoas </mat-card-title>
+
+  <div class="header_fixed" >
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of person">
+        <tr >
+          <td>{{ item.businessEntityID }}</td>
+          <td>{{ item.name }}</td>
+          <td class="td-action">
+            <button mat-raised-button color="primary" (click)="detailPerson(item.businessEntityID)">Detalhes</button>
+            <button mat-raised-button color="warn" class="btn-danger" (click)="deletePerson(item.businessEntityID)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <div class="fab">
+    <button class="main" (click)="nativateToPersonCreate()"></button>
+  </div>
+</mat-card>

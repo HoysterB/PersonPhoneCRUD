@@ -1,0 +1,244 @@
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.header_fixed {
+  height: 500px;
+  overflow: auto;
+  margin-top:32px;
+  border: 1px solid #dddddd;
+}
+table button{
+  z-index: 0;
+}
+
+table .td-action{
+  text-align: center; 
+  vertical-align: middle;
+  width: 350px;
+}
+
+.header_fixed thead th{
+  position: sticky;
+  top: 0;
+  background-color: #2a4d81;
+  color: #ddd;
+  font-size: 15px;
+  font-weight: 800;
+}
+th{
+  z-index: 1;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+tr:hover td{
+  background-color: #ddd;
+}
+::webkit-scrollbar{
+  width: 6px;
+}
+
+::webkit-scrollbar-track{
+  -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,00.3);
+}
+
+
+::webkit-scrollbar-thumb{
+  -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,00.3);
+}
+
+.mt {
+  margin-top: 32px;
+}
+
+main.cards {
+  display: flex;
+  padding: 32px;
+}
+
+main.cards section.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-left: 32px;
+}
+
+main.cards section.card:first-child {
+  margin-left: 0;
+}
+
+.title {
+  font-weight: 300;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: 300;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+main.cards section.card img {
+  width: 100%;
+}
+
+main.cards section.card h3 {
+  font-size: 100%;
+  margin: 16px 0;
+}
+
+main.cards section.card span {
+  font-weight: 300;
+  max-width: 240px;
+  font-size: 80%;
+  margin-bottom: 16px;
+}
+
+main.cards section.card button {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border-radius: 32px;
+  border: 0;
+  cursor: pointer;
+  font-size: 80%;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 16px 0;
+}
+
+main.cards section.card.contact button {
+  background: linear-gradient(to right, #2a4d81, #bbdeff);
+}
+main.cards section.card.shop button {
+  background: linear-gradient(to right, #2a4d81, #bbdeff);
+}
+
+main.cards section.card.contact {
+  box-shadow: 20px 20px 50px -30px #dbc4ff;
+}
+
+.fab {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.fab button {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #2a4d81;
+  border: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  color: white;
+
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.btn-danger{
+  margin-left: 16px;
+}
+.excluir {
+  background: red !important;
+  margin-top: 16px;
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.43);
+}
+
+.fab button.main {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: #2a4d81;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+.fab button.main:before {
+  content: "+";
+}
+
+.fab ul {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  padding-right: 5px;
+  margin: 0;
+  list-style: none;
+  z-index: 10;
+
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.fab ul li {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: -10%;
+  opacity: 0;
+
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.fab ul li label {
+  margin-right: 10px;
+  white-space: nowrap;
+  display: block;
+  margin-top: 10px;
+  padding: 5px 8px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  height: 18px;
+  font-size: 16px;
+  pointer-events: none;
+  opacity: 0;
+
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.fab button.main:active,
+.fab button.main:focus {
+  outline: none;
+  background-color: #2a4d81;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.fab button.main:active + ul,
+.fab button.main:focus + ul {
+  bottom: 70px;
+}
+
+.fab button.main:active + ul li,
+.fab button.main:focus + ul li {
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+.fab button.main:active + ul li:hover label,
+.fab button.main:focus + ul li:hover label {
+  opacity: 1;
+}

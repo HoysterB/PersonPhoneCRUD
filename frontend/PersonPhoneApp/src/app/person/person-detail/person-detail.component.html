@@ -1,0 +1,28 @@
+<mat-card class="home mat-elevation-z3 mt">
+  <mat-card-title class="title"></mat-card-title>
+  
+
+  <button mat-raised-button color="primary">Adicionar Contatos</button>
+
+  <div class="header_fixed">
+    <table>
+      <thead>
+        <tr>
+          <th>Número</th>
+          <th>Tipo</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let phone of personPhones">
+          <td>{{ phone.phoneNumber }}</td>
+          <td class="td-action"> 
+            <button mat-raised-button color="warn" class="btn-danger">
+              Excluir
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</mat-card>
